@@ -1,55 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/bootstrap/bootstrap.bundle.js" defer></script>
     <title>Hoja De Vida</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Hoja De Vida</h1>
     </header>
     <main>
-        <section class="block1">
-            <div class="img">
-                <img src="images/foto.jpeg" alt="foto de perfil" class="foto">
-            </div>
-            <p>Duban Fabian Rodriguez Garcia</p>
-            <p>vrd. Alto Mantilla Fnc. El pomaroso</p>
-            <p>duban212002@gmail.com</p>
-            <a href="https://github.com/duvanrg" class="link">GitHub</a>
-            <p class="title"><Strong>Perfil Profesional</Strong></p>
-            <p class="texto">Buen dia <br> yo soy una persona apasionada por aprender sobre programacion, cada día conocer nuevas cosas y poderlas aplicar a mi aprendizaje</p>
+        <div class="doc">
+            <section class="block1">
+                <div class="" style="width: 18rem;">
+                    <img src="images/foto.jpeg" class="card-img-top rounded-5" alt="...">
+                    <div class="card-body">
+                      <h4>Duban Fabian Rodriguez Garcia</p>
+                      <p>vrd. Alto Mantilla Fnc. El pomaroso</p>
+                      <p>duban212002@gmail.com</p>
+      
+                      <div class="github">
+                          <a href="https://github.com/duvanrg" id="linkGit" target="_blank">
+                              <img src="images/icon_Github.png" class="icon_github">
+                              Github
+                          </a>
+                      </div> 
+                    </div>
+                  </div>
+                <!-- <div class="img">
+                    <img src="images/foto.jpeg" alt="foto de perfil" class="foto">
+                </div>
+                <p>Duban Fabian Rodriguez Garcia</p>
+                <p>vrd. Alto Mantilla Fnc. El pomaroso</p>
+                <p>duban212002@gmail.com</p>
 
-        </section>
-        <section class="block2">
-            <p class="title"><Strong>Perfil Tecnologico</Strong></p>
-            <img src="images/bootstrap.svg" alt="" class="tecno">
-            <img src="images/html5.svg" alt="" class="tecno">
-            <img src="images/java.svg" alt="" class="tecno">
-            <img src="images/javascript.svg" alt="" class="tecno">
-            <img src="images/mysql.svg" alt="" class="tecno">
-            <img src="images/nodejs.svg" alt="" class="tecno">
-            <img src="images/oracle.svg" alt="" class="tecno">
-            <img src="images/postgresql.svg" alt="" class="tecno">
-            <img src="images/python.svg" alt="" class="tecno">
-            <img src="images/Spring.svg" alt="" class="tecno">
-            <p class="title"><Strong>Proyectos Personales</Strong></p>
+                <div class="github">
+                    <a href="https://github.com/duvanrg" id="linkGit" target="_blank">
+                        <img src="images/icon_Github.png" class="icon_github">
+                        Github
+                    </a>
+                </div> -->
+                <p class="title"><Strong>Perfil Profesional</Strong></p>
+                <p class="texto">Buen dia <br> yo soy una persona apasionada por aprender sobre programacion, cada día
+                    conocer nuevas cosas y poderlas aplicar a mi aprendizaje</p>
 
-            <p class="title"><Strong>Logros</Strong></p>
-        </section>
-        <section class="block3">
-            <p class="title"><Strong>Idiomas</Strong></p>
-            
-            <p class="title"><Strong>Estudios</Strong></p>
+            </section>
+            <section class="block2">
+                <p class="title"><Strong>Perfil Tecnologico</Strong></p>
+                <img src="images/bootstrap.svg" alt="bootstrap" class="tecno">
+                <img src="images/html5.svg" alt="html5" class="tecno">
+                <img src="images/java.svg" alt="java" class="tecno">
+                <img src="images/javascript.svg" alt="javascript" class="tecno">
+                <img src="images/mysql.svg" alt="mysql" class="tecno">
+                <img src="images/nodejs.svg" alt="nodejs" class="tecno">
+                <img src="images/oracle.svg" alt="oracle" class="tecno">
+                <img src="images/postgresql.svg" alt="postgresql" class="tecno">
+                <img src="images/python.svg" alt="python" class="tecno">
+                <img src="images/Spring.svg" alt="Spring" class="tecno">
+                <p class="title"><Strong>Proyectos Personales</Strong></p>
 
-            <p class="title"><Strong>Experiencia</Strong></p>
-        </section>
+                <p class="title"><Strong>Logros</Strong></p>
+            </section>
+            <section class="block3">
+                <p class="title"><Strong>Idiomas</Strong></p>
+                <p>Español</p>
+                <p>Ingles (A2)</p>
+                <p class="title"><Strong>Estudios</Strong></p>
+                <p>Tecnologo en desarrollo de sistemas informaticos (2023)</p>
+                <p>Unidades Tecnoligicas de Santander</p>
+                <p>Fundamentos De Pruebas De Software (2023)</p>
+                <p>Colnodo</p>
+                <p class="title"><Strong>Experiencia</Strong></p>
+            </section>
+        </div>
+
     </main>
 </body>
+
 </html>

@@ -1,9 +1,15 @@
 body{
-    background-color: rgb(187, 216, 216);
-    font-family: 'Comic Neue', cursive;
+    background: radial-gradient(rgb(167, 90, 255),rgb(0, 238, 255));
 }
+
 main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.doc{
     background-color: aliceblue;
+    width: 800px;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -38,6 +44,31 @@ p.title{
 
 section{
     padding: 5px;
-    width: 300px;
+    width: 310px;
     border: 1px solid rgb(36, 79, 49);
+}
+
+.github{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 120PX;
+    height: 25px;
+    gap: 10px;
+    padding: 2px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+}
+#linkGit{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    display: flex;
+    gap: 10px;
+    font-size: 10 px;
+}
+.icon_github{
+    width: 20px;
+    border-radius: 50%;
+    background-color: aliceblue;
 }
