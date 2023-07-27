@@ -2,3 +2,29 @@ th, td {
     border: 1px solid ;
     height: 10px;
 }
+
+.menu a {
+    background-color: aqua;
+    padding: 0% 10% 10% 10%;
+
+}
+
+div:hover a{
+    background-color: steelblue ;
+    color: blueviolet;
+    padding: 0% 10% 10% 10%;
+    border: 2px solid #444;
+
+}
+/* 
+a:active{
+ 
+} */
+
+a:focus-within {
+    border: 5px dotted #444;
+}
+/* 
+form :focus-within{
+
+} */

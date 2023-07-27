@@ -1,5 +1,8 @@
 body{
-    background: radial-gradient(rgb(167, 90, 255),rgb(0, 238, 255));
+    animation-name: background;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 main{
@@ -24,9 +27,20 @@ header{
     align-items: center;
 }
 
-.foto{
-    border-radius: 10% 10% 40% 10%;
-    height: 150px;
+.container {
+    display: flex;
+    gap:3px;
+}
+.perfil{
+    border-radius: 0% 10% 40% 10%;
+    height: 200px;
+    padding: 10px;
+}
+
+.perfil :hover{
+    border-radius: 0% 10% 40% 10%;
+    height: 210px;
+    padding: 0px;
 }
 
 .tecno {
@@ -47,28 +61,56 @@ section{
     width: 310px;
     border: 1px solid rgb(36, 79, 49);
 }
-
-.github{
-    background-color: rgb(255, 255, 255);
+#marco { 
+    background-color: #ffffff;
     display: flex;
-    width: 120PX;
-    height: 25px;
+    flex-direction: column;
+    align-items: center;
+    width: 80PX;
+    height: 80px;
     gap: 10px;
-    padding: 2px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5%;
     box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
 }
-#linkGit{
+
+.linkGit{
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     display: flex;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80PX;
+    height: 80px;
     gap: 10px;
-    font-size: 10 px;
+    padding: 2px;
+    font-size: 100%;
 }
-.icon_github{
-    width: 20px;
+
+.icon_gmail{
+    position: relative;
+    width: 90%;
+    height: 50%;
     border-radius: 50%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
+}
+
+.icon_github{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: rgba(218, 218, 218, 0.63);
+}
+
+@keyframes background{
+    0%{
+        background-color: #00ffdd;
+    }
+    100%{
+        background-color: #2600ff;
+    }
 }

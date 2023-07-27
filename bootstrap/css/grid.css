@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-gap: 5px;
+}
+/* 
+.grid_container, .grid_container > div {
+    border: 1px solid black;
+} */
+
+.grid_item1{
+    background-color: blue;
+    text-align: center;
+    border: black 5px solid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+}
+
+.grid_item2 {
+    background-color: grey;
+    text-align: center;
+    border: black 5px solid;
+}
