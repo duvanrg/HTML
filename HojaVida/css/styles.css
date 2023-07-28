@@ -1,43 +1,49 @@
-body{
+body {
     animation-name: background;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.doc{
+
+.doc {
     background-color: aliceblue;
-    width: 800px;
+    width: 900px;
     margin: 10px;
     padding: 10px;
     display: flex;
     flex-direction: row;
 }
-header{
+
+header {
     background-color: aliceblue;
     margin: 10px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 24px;
 }
 
 .container {
     display: flex;
-    gap:3px;
+    gap: 3px;
 }
-.perfil{
+
+.perfil {
     border-radius: 0% 10% 40% 10%;
     height: 200px;
     padding: 10px;
 }
 
-.perfil :hover{
+.perfil :hover {
     border-radius: 0% 10% 40% 10%;
     height: 210px;
     padding: 0px;
@@ -47,70 +53,110 @@ header{
     width: 50px;
 }
 
-p{
+p {
     font-size: 13px;
 }
 
-p.title{
+p.title {
     font-size: 17px;
 }
 
 
-section{
+section {
     padding: 5px;
     width: 310px;
     border: 1px solid rgb(36, 79, 49);
+    width: 100%;
+    font-size: 14px;
 }
-#marco { 
+
+#marco_Gmail {
     background-color: #ffffff;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80PX;
-    height: 80px;
+    width: 270PX;
+    height: 30px;
+    margin-bottom: 5px;
     gap: 10px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5%;
     box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+    width: 100%;
 }
 
-.linkGit{
+#marco_Github {
+    background-color: #ffffff;
+    display: flex;
+    width: 150PX;
+    height: 30px;
+    gap: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+    width: 100%;
+}
+
+.link {
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     display: flex;
-
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 80PX;
-    height: 80px;
+    height: 30px;
     gap: 10px;
     padding: 2px;
-    font-size: 100%;
+    font-size: 80%;
+
 }
 
-.icon_gmail{
+.icon_gmail {
     position: relative;
-    width: 90%;
-    height: 50%;
+    width: 100%;
+    height: 60%;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
 }
 
-.icon_github{
+.icon_github {
     position: relative;
-    width: 50%;
-    height: 50%;
+    margin-left: 4px;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
     background-color: rgba(218, 218, 218, 0.63);
 }
 
-@keyframes background{
-    0%{
+.stack {
+    display: flex;
+}
+
+.stack img  {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+
+@keyframes background {
+    0% {
         background-color: #00ffdd;
     }
-    100%{
+
+    100% {
         background-color: #2600ff;
     }
 }
