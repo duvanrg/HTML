@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    animation-name: background;
+    display: grid;
+    grid-template-rows: 1fr 30fr;
+    place-content: center;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 100%;
+}
+
+p{
+    text-align: justify;
+}
+
+
+.rgb {
+    background: rgb(0, 0, 0);
+    border: none;
+    font-size: 24px;
+    position: relative;
+    border-radius: 12px;
+
+}
+
+.rgb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+    background-size: 800%;
+    border-radius: 12px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+#tittle {
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.doc {
+    background-color: aliceblue;
+    width: 95%;
+    max-width: 1300px;
+    margin: 10px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    padding: 15px;
+}
+
+.container {
+    background-color: rgba(54, 248, 255, 0.221);
+    display: flex;
+    gap: 3px;
+}
+
+.perfil {
+    border-radius: 0% 10% 40% 10%;
+    height: 200px;
+    width: 250px;
+    padding: 10px;
+}
+
+.perfil :hover {
+    border-radius: 0% 10% 40% 10%;
+    height: 210px;
+    padding: 0px;
+}
+
+.descripcion p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.tecno {
+    width: 50px;
+    margin: 4px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.23em;
+}
+
+p.title {
+    width: 270px;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #0d0252;
+    color: aliceblue;
+    padding: 8px 2px;
+}
+
+.text {
+    background-color: rgba(95, 158, 160, 0.221);
+    margin-bottom: 0;
+}
+
+section {    
+    background-color: #fff;
+    padding: 5px;
+    width: 310px;
+    border: 1px solid rgb(36, 79, 49);
+    width: 100%;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+#marco_Gmail {
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 5px;
+    gap: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+}
+
+#marco_Github {
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    width: 150PX;
+    height: 30px;
+    margin-bottom: 5px;
+    gap: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+}
+
+#marco_linkedin {
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    width: 150PX;
+    height: 30px;
+    margin-bottom: 5px;
+    gap: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
+}
+
+.links{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    gap: 10px;
+    padding: 2px;
+    font-size: 80%;
+
+}
+
+.icon_gmail {
+    position: relative;
+    width: 35px;
+    height: 80%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.icon_github {
+    position: relative;
+    margin-left: 4px;
+    width: 20%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: rgba(218, 218, 218, 0.63);
+}
+
+.icon_linkedin {
+    position: relative;
+    margin-left: 4px;
+    width: 20%;
+    height: 80%;
+}
+
+.stack {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.stack img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+.Texto {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+@media (max-width: 1000px) {
+    .doc {
+        flex-direction: column;
+        
+        min-width: 415px;
+    }
+    
+    
+    .section {
+        background-color: #ffffff;
+        width: 30%;
+    }
+
+    .descripcion {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .perfil {
+        width: 220px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .links{
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    #marco_Gmail,
+    #marco_Github,
+    #marco_linkedin {
+        padding-top: 3px;
+        width: 50%;
+        min-width: 210%;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #marco_Github,
+    #marco_linkedin {
+        min-width: 65%;
+    }
+
+    .icon_gmail{
+        width: 60px;
+    }
+
+    .icon_github {
+        width: 30px;
+    }
+
+    .icon_linkedin{
+        width: 25px;
+    }
+
+
+    
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+@keyframes background {
+    0% {
+        background-color: rgb(0, 54, 13);
+    }
+
+    50% {
+        background-color: #520227;
+    }
+
+    100% {
+        background-color: #0d0252;
+    }
+}
