@@ -6,16 +6,13 @@
 
 body {
     animation-name: background;
-    display: grid;
-    grid-template-rows: 1fr 30fr;
-    place-content: center;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     width: 100%;
 }
 
-p{
+p {
     text-align: justify;
 }
 
@@ -44,13 +41,13 @@ p{
     animation: glowing 20s linear infinite;
 }
 
+
 header {
     background-color: rgb(0, 0, 0);
     margin: 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-content: center;
     font-size: 24px;
 }
 
@@ -59,20 +56,16 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+    display: grid;
+    justify-items: center;
 }
 
 .doc {
-    background-color: aliceblue;
-    width: 95%;
-    max-width: 1300px;
-    margin: 10px;
-    border-radius: 0;
-    display: flex;
-    flex-direction: row;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .block {
@@ -81,7 +74,6 @@ main {
 
 .container {
     background-color: rgba(54, 248, 255, 0.221);
-    display: flex;
     gap: 3px;
 }
 
@@ -129,12 +121,10 @@ p.title {
     margin-bottom: 0;
 }
 
-section {    
+section {
     background-color: #fff;
     padding: 5px;
-    width: 310px;
     border: 1px solid rgb(36, 79, 49);
-    width: 100%;
     font-size: 14px;
     border-radius: 0;
 }
@@ -178,7 +168,7 @@ section {
     box-shadow: 2px 3px rgba(139, 139, 139, 0.5);
 }
 
-.links{
+.links {
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -255,19 +245,19 @@ section {
 }
 
 
-@media (max-width: 1000px) {
-    .doc {
-        flex-direction: column;
-        
-        min-width: 415px;
-    }
-    
-    
-    .section {
+@media (max-width: 1200px) {
+
+    section {
         background-color: #ffffff;
-        width: 30%;
+        border: none;
     }
 
+    .doc {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 3fr;
+    }
+    
     .descripcion {
         display: flex;
         align-items: center;
@@ -280,12 +270,19 @@ section {
         height: 200px;
         border-radius: 50%;
     }
-    .links{
+
+    .links {
         margin-top: 10px;
         flex-direction: row;
         justify-content: center;
         gap: 15px;
     }
+
+    p.title {
+        width: 100%;
+        text-align: center;
+    }
+
     #marco_Gmail,
     #marco_Github,
     #marco_linkedin {
@@ -304,7 +301,7 @@ section {
         min-width: 65%;
     }
 
-    .icon_gmail{
+    .icon_gmail {
         width: 60px;
     }
 
@@ -312,12 +309,9 @@ section {
         width: 30px;
     }
 
-    .icon_linkedin{
+    .icon_linkedin {
         width: 25px;
     }
-
-
-    
 }
 
 @keyframes glowing {
@@ -333,8 +327,6 @@ section {
         background-position: 0 0;
     }
 }
-
-
 
 @keyframes background {
     0% {

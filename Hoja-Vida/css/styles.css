@@ -21,8 +21,7 @@ main {
 
 .doc {
     background-color: aliceblue;
-    width: 95%;
-    max-width: 1300px;
+    width: 100%;
     margin: 10px;
     display: flex;
     flex-direction: row;
