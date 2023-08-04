@@ -57,6 +57,10 @@ main {
     text-decoration: none;
 }
 
+section {
+    margin: 50px 0 50px 0;
+}
+
 .btn {
     background-color: #ff702a;
     color: #fff;
@@ -81,10 +85,10 @@ main {
     place-items: center;
 }
 
-.text div{
+.text div {
     display: flex;
     flex-direction: column;
-    gap: 25px ;
+    gap: 25px;
 }
 
 #banner .text .title {
@@ -105,11 +109,11 @@ main {
     align-items: center;
 }
 
-#banner img{
+#banner img {
     width: 300px;
 }
 
-.img img{
+.img img {
     width: 380px;
 }
 
@@ -127,7 +131,7 @@ main {
 
 #about-us .subtittle {
     color: #fff;
-    font-size: 36px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -192,7 +196,7 @@ main {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     place-items: center;
 }
 
@@ -203,17 +207,18 @@ main {
     place-items: center;
     background-color: #ffefe8;
     border-radius: 0;
-    height: 105%;
+    height: 100%;
     width: 80%;
     border: #000 solid 2px;
+    padding-bottom: 10px;
 }
 
-#menu .img-card{
+#menu .img-card {
     width: 55%;
-    padding: 15px 0 0 0 ;
+    padding: 15px 0 0 0;
 }
 
-#menu .card-body{
+#menu .card-body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -221,14 +226,14 @@ main {
     gap: 5px;
 }
 
-.card-title, .card-text{
+.card-title,
+.card-text {
     text-align: center;
 }
 
 #service {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
     padding: 50px 7px 7px 7px;
 }
 
@@ -250,6 +255,7 @@ main {
     color: #fff;
     font-size: 36px;
     font-weight: bold;
+    padding: 0 150px;
 }
 
 #service .text div {
@@ -260,10 +266,11 @@ main {
     margin-bottom: 30px;
 }
 
-#service .img-card{
+#service .img-card {
     width: 55%;
-    padding: 15px 0 0 0 ;
+    padding: 15px 0 0 0;
 }
+
 
 #service .card {
     position: relative;
@@ -274,12 +281,14 @@ main {
     width: 90%;
 }
 
-#service .card-title{
+#service .card-title {
+    font-size: 30px;
     color: #ff702a;
 }
 
-#service .card-text{
+#service .card-text {
     color: #fff;
+    font-size: 20px;
 }
 
 #Contact {
@@ -295,6 +304,7 @@ main {
     background-color: #ffefe8;
     width: 80%;
     height: 70%;
+    padding: 20px;
 }
 
 #Contact .card-body {
@@ -305,6 +315,7 @@ main {
     background-color: #ffefe8;
     height: 300px;
 }
+
 #Contact .card-title {
     font-size: 46px;
 }
@@ -318,15 +329,15 @@ main {
 footer {
     width: 100%;
     height: 300px;
-
 }
 
 footer section {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    align-items: center;
+    justify-items: center;
 }
 
 footer h5 {
@@ -428,9 +439,26 @@ footer h5 {
         height: 50%;
     }
 
+    .head .encabezado {
+        place-items: center;
+        grid-template-columns: none;
+    }
+
+    .encabezado .titulo {
+        font-size: 50px;
+        margin: 0 0 20px 0;
+    }
+
+    .encabezado div {
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
     #banner {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: none;
         width: 100%;
     }
 
@@ -443,8 +471,7 @@ footer h5 {
     .text>div {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        place-items: center;
     }
 
     .text .title {
@@ -457,36 +484,46 @@ footer h5 {
     }
 
     #about-us {
-        display: flex;
-        flex-direction: column-reverse;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
         width: 100%;
     }
 
+    #about-us .img {
+        grid-row: 2;
+    }
+
     #about-us .text {
+        grid-row: 1;
         margin-top: 10px;
         width: 100%;
         height: 50%;
     }
 
-    #menu-cards {
-        display: flex;
-        flex-direction: column;
+    #menu {
         gap: 10px;
+    }
+
+    .cards {
+        grid-template-columns: none;
+        gap: 40px;
+    }
+
+    footer {
+        padding-left: 10%;
+        place-items: center;
+        height: 100%;
     }
 
     footer section {
         width: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        display: grid;
+        grid-template-columns: none;
+        place-items: start;
         gap: 0px;
     }
 
-    footer {
-        align-items: start;
-        height: 100%;
-    }
 
     footer .container-row {
         width: 300px;
