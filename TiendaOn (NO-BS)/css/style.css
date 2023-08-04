@@ -13,6 +13,7 @@
 
 main {
     margin: 5px;
+    display: grid;
 }
 
 .head .encabezado {
@@ -60,25 +61,30 @@ main {
     background-color: #ff702a;
     color: #fff;
     min-width: 130px;
-    min-height: 30px;
-    width: 40%;
+    min-height: 20px;
+    width: 30%;
     height: 20%;
+    align-items: center;
     text-align: center;
     text-decoration: none;
     padding: 10px 10px;
 }
 
 #banner {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .text {
-    width: 40%;
     display: grid;
-    grid-template-rows: repeat(1fr);
-    justify-items: center;
-    align-items: center;
+    place-items: center;
+}
+
+.text div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px ;
 }
 
 #banner .text .title {
@@ -93,38 +99,41 @@ main {
 
 .img {
     height: 400px;
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.img img {
+#banner img{
     width: 300px;
 }
 
-.about-us {
-    display: flex;
-    justify-content: center;
+.img img{
+    width: 380px;
+}
+
+#about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 3px;
 }
 
-.about-us .text .title {
+#about-us .text .title {
     color: #fc742c;
     font-size: 16px;
 }
 
-.about-us .subtittle {
+
+#about-us .subtittle {
     color: #fff;
     font-size: 36px;
     font-weight: bold;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#menu {
+    display: grid;
+    grid-template-rows: 3fr;
     padding: 3px;
 }
 
@@ -132,7 +141,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute; */
+    position: absolute;
     top: 10px;
     right: 10px;
     border: #f89f37 2px solid;
@@ -149,27 +158,31 @@ main {
     width: 100%;
 }
 
-.menu .text {
+#menu {
+    place-content: center;
+}
+
+#menu .text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.menu .text .title {
+#menu .text .title {
     color: #fc742c;
     font-size: 16px;
     width: 100%;
     text-align: center;
 }
 
-.menu .subtittle {
+#menu .subtittle {
     color: #fff;
     font-size: 36px;
     font-weight: bold;
 }
 
-.menu .text div {
+#menu .text div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,39 +190,69 @@ main {
     margin-bottom: 30px;
 }
 
-.menu-cards {
-    display: flex;
-    gap: 10px;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
 }
 
-.service {
+#menu .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: #ffefe8;
+    border-radius: 0;
+    height: 105%;
+    width: 80%;
+    border: #000 solid 2px;
+}
+
+#menu .img-card{
+    width: 55%;
+    padding: 15px 0 0 0 ;
+}
+
+#menu .card-body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 5px;
+}
+
+.card-title, .card-text{
+    text-align: center;
+}
+
+#service {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3px;
+    padding: 50px 7px 7px 7px;
 }
 
-.service .text {
+#service .text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.service .text .title {
+#service .text .title {
     color: #fc742c;
     font-size: 16px;
     width: 100%;
     text-align: center;
 }
 
-.service .subtittle {
+#service .subtittle {
     color: #fff;
     font-size: 36px;
     font-weight: bold;
 }
 
-.service .text div {
+#service .text div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,31 +260,65 @@ main {
     margin-bottom: 30px;
 }
 
-.service-cards {
-    display: flex;
-    gap: 10px;
+#service .img-card{
+    width: 55%;
+    padding: 15px 0 0 0 ;
 }
 
-.Contact {
+#service .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 0;
+    width: 90%;
+}
+
+#service .card-title{
+    color: #ff702a;
+}
+
+#service .card-text{
+    color: #fff;
+}
+
+#Contact {
     height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    place-items: center;
 }
 
-.Contact .card {
+#Contact .card {
+    display: flex;
+    flex-flow: column;
     background-color: #ffefe8;
     width: 80%;
+    height: 70%;
+}
+
+#Contact .card-body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    place-content: center;
+    background-color: #ffefe8;
     height: 300px;
+}
+#Contact .card-title {
+    font-size: 46px;
+}
+
+#Contact .btn {
+    margin-top: 30px;
+    height: 20px;
+    text-align: center;
 }
 
 footer {
     width: 100%;
     height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 footer section {
@@ -379,19 +456,19 @@ footer h5 {
         text-align: center;
     }
 
-    .about-us {
+    #about-us {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
     }
 
-    .about-us .text {
+    #about-us .text {
         margin-top: 10px;
         width: 100%;
         height: 50%;
     }
 
-    .menu-cards {
+    #menu-cards {
         display: flex;
         flex-direction: column;
         gap: 10px;
