@@ -5,28 +5,31 @@ color c : #157ffb
 https://www.youtube.com/playlist?list=PL0umZHgBI6PCou20xz-Uajs-tV3nP7LFi
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 header {
     display: flex;
     justify-content: center;
-    background-color: #3669c9;
-    width: auto;
     height: 100px;
+    width: 100%;
 }
 
 nav {
+    position: fixed;
+    background-color: #3669c9;
     display: flex;
     place-items: center;
     justify-content: space-evenly;
+    height: 100px;
     width: 100%;
 }
+
 nav a {
-    text-decoration: none;
+    d text-decoration: none;
     color: #fff;
     font-size: 25px;
 }
@@ -39,53 +42,102 @@ nav button {
     padding: 10px 45px;
 }
 
+/* 
+section {
+    margin-bottom: 5rem;
+} */
+
 .banner {
-    position: relative;
     display: flex;
-    place-items: center;
+    justify-items: center;
+    align-items: center;
     background-image: url(../images/Fondo.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 900px;
-    max-height: 1700px;
-    padding: 20px;
+    min-height: 760px;
     gap: 30px;
-    align-items: center;
 }
 
-.banner #consultar {
-    margin-left: 5%;
-    display: flex;
-    justify-content: start;
-    width: 900px;
-    height: 90%;
-}
-
-#consultar .form {
-    width: 65%;
-    height: 90%;
-    min-width: 500px;
-    background-color: #afff;
+.form {
+    background-color: #fff;
     border-radius: 5%;
+    padding: 25px;
+    width: 67%;
 }
 
-.banner #consultar .tittle{
+.form .tittle {
+    width: 80%;
     text-align: center;
     font-size: 25px;
 }
-.banner #consultar .text{
+
+.form .text {
+    width: 80%;
     text-align: center;
     font-size: 12px;
+}
+
+.form div {
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+}
+
+#consultar #form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.banner .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: 0;
+}
+
+#form label {
+    grid-column: 1 / span 2;
+    text-align: left;
+    font-weight: bold;
+}
+
+#form input,
+#form select {
+    grid-column: 1 / span 2;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+#form .button {
+    place-self: center;
+    grid-column: 1 / span 2;
+    width: 50%;
+    height: 50px;
+    background-color: #157ffb;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 10px 25px;
 }
 
 .banner .conocer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    place-content: center;
+    margin: 0 auto;
     width: 550px;
     height: 80%;
+    margin-top: 7rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner .conocer .tittle {
@@ -95,9 +147,9 @@ nav button {
 }
 
 .banner .conocer .text {
-    width: 85%;
-    line-height: 1.3rem;
-    margin: 0 15px;
+    line-height: 1.4rem;
+    margin: 15px 0;
+    font-size: 20px;
 }
 
 .banner .conocer button {
@@ -106,4 +158,62 @@ nav button {
     font-size: 20px;
     border-radius: 50px;
     padding: 10px 25px;
+}
+
+#que-es .grid-container {
+    display: grid;
+    grid-template-areas: 'tittle tittle'
+        'texto image';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 55px auto;
+
+}
+
+#que-es .tittle {
+    grid-area: tittle;
+    font-size: 30px;
+    place-self: center;
+}
+
+#que-es .info {
+    padding: 25px;
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-self: center;
+    width: 70%;
+    font-size: 25px;
+    text-align: center;
+    gap: 5px;
+}
+
+#que-es .image {
+    grid-area: image;
+    justify-self: center;
+    height: 400px;
+}
+
+#que-es .info .link {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.down {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.down::after {
+    content: "\25BD";
+    /* Código Unicode de la flecha hacia abajo */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 20px;
 }

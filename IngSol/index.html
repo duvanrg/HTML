@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-
-    <script src="js/bootstrap/bootstrap.esm.min.js"></script>
-
     <title>Document</title>
 </head>
 
@@ -24,27 +26,63 @@
     </header>
     <main>
         <section class="banner">
-            <div id="consultar">
+            <div class="grid-container">
                 <div class="form">
-
-                    <p class="tittle">Consulta tu estado de ingreso solidario</p>
-                    <p class="text">Por favor ingresa tus datos personales para revisar el estado de entrega de tu
-                        ingreso
-                    </p>
-                    <form action="consultar" method="post">
-
+                    <div>
+                        <p class="tittle">Consulta tu estado de ingreso solidario</p>
+                        <p class="text">Por favor ingresa tus datos personales para revisar el estado de entrega de tu
+                            ingreso
+                        </p>
+                    </div>
+                    <form action="/consultar" method="post" id="form">
+                        <label for="doc">Tipo de Documento:</label>
+                        <select name="doc" id="doc">
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="CC">Cedula Ciudadania.</option>
+                            <option value="TI">Tarjeta de identidad.</option>
+                            <option value="CE">Cédula de extranjería.</option>
+                            <option value="PB">Pasaporte.</option>
+                        </select>
+                        <label for="nroDoc">Numero de Documento:</label>
+                        <input type="text" id="nroDoc" name="nroDoc" required>
+                        <label for="nombre">Primer Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="surname">Primer Apellido:</label>
+                        <input type="text" id="surname" name="surname" required>
+                        <label for="dateExpe">Fecha de expedición del documento:</label>
+                        <input type="date" id="dateExpe" name="dateExpe" placeholder="mm/dd/yyyy">
+                        <label for="phone">Telefono Movil:</label>
+                        <input type="text" name="phone" id="phone">
+                        <input type="submit" value="Consultar" class="button">
                     </form>
                 </div>
-            </div>
-            <div class="conocer">
-                <p class="tittle">Ingreso solidario</p>
-                <p class="text">Debido a la situación generada por el COVID-19, <br> el gobierno nacional aportará a las
-                    familias más afectadas <br> y que no pertenezcan a ningún programa social <br> un subsidio por
-                    $160.000</p>
-                <a href="#que-es"><button>Conocer más</button></a>
+                <div class="conocer">
+                    <p class="tittle">Ingreso solidario</p>
+                    <p class="text">Debido a la situación generada por el COVID-19, <br> el gobierno nacional aportará a
+                        las
+                        familias más afectadas <br> y que no pertenezcan a ningún programa social <br> un subsidio por
+                        $160.000</p>
+                    <a href="#que-es"><button>Conocer más</button></a>
+                </div>
             </div>
         </section>
-        <section></section>
+        <section id="que-es">
+            <div class="grid-container">
+                <h2 class="tittle">¿Qué es el Ingreso Solidario?</h2>
+                <div class="info">
+                    <p class="text">Es un esquema mediante el cual se entrega una transferencia monetaria en favor de
+                        los hogares en situación de pobreza y vulnerabilidad que no sean beneficiarios de programas
+                        sociales del Estado. <br><br>
+                        Los hogares en condición de pobreza y vulnerabilidad, afectados en sus ingresos como
+                        consecuencia de la pandemia del coronavirus , que no hagan parte de los programas sociales
+                        "Familias en Acción", "Colombia Mayor"," Jóvenes en Acción" y "Devolución del IVA" podrán
+                        acceder a esta medida social.</p>
+                    <a href="#etapas" class="link">Conocer las etapas de entrega</a>
+                    <a href="#etapas" class="down"></a>
+                </div>
+                <img src="images/Drop.png" alt="Drop" class="image">
+            </div>
+        </section>
         <section></section>
         <section></section>
         <section></section>
